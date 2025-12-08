@@ -24,3 +24,8 @@ Homestead.json
 Homestead.yaml
 Thumbs.db
 *.swp
+
+# - testing coverage report
+coverage-report/
+coverage.txt
+coverage/
