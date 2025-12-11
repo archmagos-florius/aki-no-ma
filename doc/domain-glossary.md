@@ -6,6 +6,7 @@
 - if user is not elevated to admin
     - may create orders and maintain a personal cart
     - can maintain several addresses associated with that account
+    - can be entered into a draw to win raffle prizes
 
 
 ## Admin
@@ -107,4 +108,23 @@
     - when user can create orders
     - when user can edit existing orders
     - when admins can edit a menu
+
+## Raffle
+- raffles are prizes that an admin can create
+- raffles will have:
+    - end which is a time in the future where raffle entries will be tallied
+    - name which is a title for what is being given away at the raffle
+    - description of the prize being raffled
+    - optional threshold meaning only users with entries with amounts higher than a value can be considered
+- worker will look for raffles that have been completed and execute a program to tally votes and randomly decide a winner
+
+## Raffle entries
+- raffle entries are associated with a particular raffle for a particular user
+- raffle entries have:
+    - amount of entries for user for a raffle
+    - a user id
+    - a raffle id
+- raffle entries amounts increased when:
+    - user creates an order
+    - user registers for the app while a raffle is going on counts as 2 entries
 
